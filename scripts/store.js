@@ -1,10 +1,11 @@
+'use strict';
 /* global Item */
 
 // eslint-disable-next-line no-unused-vars
 const store = (function(){
   const addItem = function(item) {
     let results = this.items.push(item);
-      console.log(results);
+    console.log(results);
   };
 
   const findById = function(id) {
@@ -12,8 +13,8 @@ const store = (function(){
   };
 
   const findAndUpdate = function (id, newData) {
-        let foundItem = this.items.find(item => {
-       return (item.id === id);});
+    let foundItem = this.items.find(item => {
+      return (item.id === id);});
     Object.assign(foundItem, newData);
   };
 

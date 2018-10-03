@@ -12,7 +12,7 @@ const api = (function() {
       method: 'POST',
       contentType: 'application/json',
       data: newItem,
-      success: (callback)
+      success: callback
     });
   };
   const updateItem = function(id, updateData, callback){
@@ -21,7 +21,7 @@ const api = (function() {
       method: 'PATCH',
       contentType: 'application/json',
       data: JSON.stringify(updateData),
-      success: (callback)
+      success: callback
     });
   };
   return {
